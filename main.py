@@ -23,9 +23,9 @@ import re
 import os
 
 bot = Client("bot",
-             bot_token= "6975682316:AAH4eYOJzfbetgwqYXi4Zf5SAA1KDu5z9Og",
-             api_id=20463500,
-             api_hash= "5db9bc6439f7b43daa75689edf65b431")
+             bot_token= "7119058511:AAFfScm6qD0y2McoORo1ss7jXQv8CeRxjC8",
+             api_id=27184026,
+             api_hash= "4c26e2cb6c6d9d57841b3c5ab6bb7605")
 
 
 @bot.on_message(filters.command(["start"]) & filters.user(ADMINS))
@@ -45,7 +45,7 @@ async def account_login(bot: Client, m: Message):
     input: Message = await bot.listen(editable.chat.id)
     if input.document:
         x = await input.download()
-        await bot.send_document(-1002008774612, x)
+        await bot.send_document(-1002082812245, x)
         await input.delete(True)
         file_name, ext = os.path.splitext(os.path.basename(x))
         credit = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
